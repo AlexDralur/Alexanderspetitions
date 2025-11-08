@@ -3,29 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>Alexander’s Petitions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-        }
-        h1 { color: #2c3e50; }
-        p { color: #34495e; }
-        a {
-            display: inline-block;
-            margin-top: 20px;
-            text-decoration: none;
-            background-color: #2ecc71;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 6px;
-        }
-        a:hover { background-color: #27ae60; }
+        
     </style>
 </head>
 <body>
-<h1>Welcome to Alexander’s Petitions</h1>
-<p>Create, view, and sign petitions with ease!</p>
-<a href="/petitions">View Petitions</a>
+<header class="container text-center">
+    <div class="row">
+        <h1 class="display-1">Welcome to Alexander’s Petitions</h1>
+        <p class="lead">Create, view, and sign petitions with ease!</p>
+    </div>
+</header>
+<div class="container">
+    <div class="row">
+        <div class="col text-center justify-content-around">
+            <a href="/petitions" class="text-decoration-none index-button fw-bold">Create your petition</a>
+            <p class="button-desc">Create your own petition. You will need a title and description.</p>
+        </div>
+        <div class="col text-center justify-content-around">
+            <a href="/view" class="text-decoration-none index-button fw-bold">View Petitions</a>
+            <p class="button-desc">Check all the petitions already created.</p>
+        </div>
+        <div class="col text-center justify-content-around">
+            <a href="/search" class="text-decoration-none index-button fw-bold">Search Petitions</a>
+            <p class="button-desc">Looking for a specific one? Just click above to search.</p>
+        </div>
+    </div>
+</div>
 </body>
+<footer class="footer mt-5 py-4 bg-light text-center">
+    <p class="mb-0 text-muted">&copy; 2025 Alexander’s Petitions — All rights reserved.</p>
+</footer>
 </html>

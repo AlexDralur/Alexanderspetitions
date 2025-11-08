@@ -1,0 +1,29 @@
+/*-------- Body */
+body {
+    text-align: center;
+    margin-top: 50px;
+    background-color: #d3d3d3;
+}
+
+/*-------- Index */
+.index-button {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 3rem auto 0;
+    color: #ffffff;
+    min-width: 20rem;
+    max-width: 20rem;
+    padding: 8rem 5rem;
+    background-color: #2ecc71;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+.index-button:hover { background-color: #27ae60; }
+
+.button-desc {
+    box-sizing: border-box;
+    margin: 1.5rem auto 0;
+    max-width: 20rem;
+    text-align: center;
+}
+
