@@ -16,9 +16,21 @@
     </style>
 </head>
 <body>
-<p>search page</p>
-</body>
+<div class="container text-center my-5">
+    <form action="/search" method="get" class="mx-auto" style="max-width: 500px;">
+        <div class="mb-3">
+            <label for="query" class="form-label fw-bold">Keyword:</label>
+            <input type="text" id="query" name="query" class="form-control" placeholder="e.g., environment" required>
+        </div>
+
+        <div class="mt-4">
+            <button type="submit" class="btn btn-success">Search</button>
+            <a href="/" class="btn btn-secondary ms-3">Back to Home</a>
+        </div>
+    </form>
+</div>
 <footer class="footer mt-5 py-4 bg-light text-center">
     <p class="mb-0 text-muted">&copy; 2025 Alexander’s Petitions — All rights reserved.</p>
 </footer>
+</body>
 </html>

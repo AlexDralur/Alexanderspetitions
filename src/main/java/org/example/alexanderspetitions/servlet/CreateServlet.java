@@ -24,12 +24,7 @@ public class CreateServlet extends HttpServlet {
         Petition petition = new Petition(title, description);
         PetitionList.addPetition(petition);
 
-        for (Petition p : PetitionList.getPetitions()) {
-            System.out.println(p.getTitle());
-            System.out.println(p.getDescription());
-        }
-
         // Return to main page
-        response.sendRedirect("/");
+        response.sendRedirect("/view");
     }
 }
