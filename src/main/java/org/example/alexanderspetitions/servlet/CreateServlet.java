@@ -5,6 +5,8 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.example.alexanderspetitions.Petition;
+import org.example.alexanderspetitions.PetitionList;
 
 import java.io.IOException;
 
@@ -18,10 +20,14 @@ public class CreateServlet extends HttpServlet {
         String title = request.getParameter("title");
         String description = request.getParameter("description");
 
-        // Check if the print is being made
-        System.out.println("Petition created:");
-        System.out.println("Title: " + title);
-        System.out.println("Description: " + description);
+        // Adds new petition to the list of petitions
+        Petition petition = new Petition(title, description);
+        PetitionList.addPetition(petition);
+
+        for (Petition p : PetitionList.getPetitions()) {
+            System.out.println(p.getTitle());
+            System.out.println(p.getDescription());
+        }
 
         // Return to main page
         response.sendRedirect("/");
