@@ -31,4 +31,9 @@ public class PetitionList {
     public static List<Petition> getPetitions() {
         return List.copyOf(petitions);
     }
+
+    //Set only to allow the JUnit test to run
+    public static void clearAll() {
+        petitions.clear();
+    }
 }
