@@ -98,6 +98,8 @@
             </resource>
         </resources>
 
+        <finalName>alexanderspetitions</finalName>
+
     </build>
 
 </project>
