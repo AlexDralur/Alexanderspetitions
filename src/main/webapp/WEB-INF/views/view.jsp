@@ -29,13 +29,39 @@
     } else {
     %>
     <ul class="list-group">
-        <% for (Petition p : petitions) { %>
+        <%
+            for (org.example.alexanderspetitions.Petition p : petitions) {
+        %>
         <li class="list-group-item">
             <strong><%= p.getTitle() %></strong><br>
-            <%= p.getDescription() %>
+            <%= p.getDescription() %><br><br>
+
+            <form action="/sign-petition" method="post" class="mt-2">
+                <input type="hidden" name="title" value="<%= p.getTitle() %>">
+                <div class="row g-2 align-items-center">
+                    <div class="col">
+                        <input type="text" name="name" placeholder="Your name" class="form-control" required>
+                    </div>
+                    <div class="col">
+                        <input type="email" name="email" placeholder="Your email" class="form-control" required>
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-success">Sign</button>
+                    </div>
+                </div>
+            </form>
+
+            <% if (!p.getSignatures().isEmpty()) { %>
+            <p class="mt-2 mb-0 text-muted small">
+                <%= p.getSignatures().size() %> people have signed.
+            </p>
+            <% } %>
         </li>
-        <% } %>
+        <%
+            }
+        %>
     </ul>
+
     <%
         }
     %>

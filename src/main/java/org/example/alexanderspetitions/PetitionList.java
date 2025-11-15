@@ -8,6 +8,7 @@ public class PetitionList {
     // Creates an array with the current petitions
     private static final List<Petition> petitions = new CopyOnWriteArrayList<>();
 
+    //Two default petitions are created to populate the list
     static {
         petitions.add(new Petition(
                 "Extra hour for parking",
