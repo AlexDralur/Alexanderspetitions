@@ -1,5 +1,6 @@
 package org.example.alexanderspetitions.servlet;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -18,10 +19,14 @@ public class ViewServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        //Retrieves the list of existing petitions
         List<Petition> petitions = PetitionList.getPetitions();
+
+        //Set the list as an attribute
         request.setAttribute("petitions", petitions);
 
-        // Forward to JSP in WEB-INF
-        request.getRequestDispatcher("src/main/webapp/WEB-INF/view.jsp").forward(request, response);
+        // Forward to JSP file to load all the petitions
+        getServletContext().getRequestDispatcher("/WEB-INF/views/view.jsp").forward(request, response);
+
     }
 }

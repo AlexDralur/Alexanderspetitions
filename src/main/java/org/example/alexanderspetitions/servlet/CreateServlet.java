@@ -17,6 +17,7 @@ public class CreateServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        //Get the title and the description created by the user
         String title = request.getParameter("title");
         String description = request.getParameter("description");
 
@@ -24,7 +25,7 @@ public class CreateServlet extends HttpServlet {
         Petition petition = new Petition(title, description);
         PetitionList.addPetition(petition);
 
-        // Return to main page
+        // Return to view page showing all the petitions
         response.sendRedirect("/view");
     }
 }
