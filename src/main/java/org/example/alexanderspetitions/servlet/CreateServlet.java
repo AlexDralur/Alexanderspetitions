@@ -26,6 +26,6 @@ public class CreateServlet extends HttpServlet {
         PetitionList.addPetition(petition);
 
         // Return to view page showing all the petitions
-        response.sendRedirect("/view");
+        response.sendRedirect("alexspetitions/view");
     }
 }

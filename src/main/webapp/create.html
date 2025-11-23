@@ -10,7 +10,7 @@
           integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+    <link rel="stylesheet" href="alexspetitions/css/style.css">
 </head>
 <body class="bg-light">
 <div class="container my-5">
@@ -18,7 +18,7 @@
     <h1 class="text-center mb-4">Create a New Petition</h1>
 
     <!--- Form to create a new petition. Sends to CreateServlet ---->
-    <form action="${pageContext.request.contextPath}/create-petition" method="post" class="mx-auto" style="max-width: 600px;">
+    <form action="alexspetitions/create-petition" method="post" class="mx-auto" style="max-width: 600px;">
         <div class="mb-3">
             <!--- Sets the title of the petition ---->
             <label for="title" class="form-label fw-bold">Petition Title</label>
@@ -33,7 +33,7 @@
 
         <!--- Buttons to submit or to return to main page ---->
         <button type="submit" class="btn btn-success">Submit Petition</button>
-        <a href="/" class="btn btn-secondary ms-3">Back to Home</a>
+        <a href="/alexspetitions" class="btn btn-secondary ms-3">Back to Home</a>
     </form>
 </div>
 <!------ Footer -->

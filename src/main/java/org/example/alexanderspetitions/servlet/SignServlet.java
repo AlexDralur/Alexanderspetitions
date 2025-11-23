@@ -36,6 +36,6 @@ public class SignServlet extends HttpServlet {
         }
 
         //The view page is then returned to the user
-        response.sendRedirect("/view");
+        response.sendRedirect("alexspetitions/view");
     }
 }
