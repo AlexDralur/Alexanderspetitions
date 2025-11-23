@@ -81,7 +81,7 @@
 
     <div class="mt-4">
         <a href="${pageContext.request.contextPath}/search.html" class="btn btn-success">New Search</a>
-        <a href="/alexanderspetitions" class="btn btn-secondary ms-3">Back to Home</a>
+        <a href="/alexspetitions" class="btn btn-secondary ms-3">Back to Home</a>
     </div>
 </div>
 

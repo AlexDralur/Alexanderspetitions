@@ -47,7 +47,7 @@ pipeline {
             steps {
                 sh """
                 scp -o StrictHostKeyChecking=no -i ~/.ssh/CT5171.pem \
-                    target/alexanderspetitions.war \
+                    target/alexspetitions.war \
                     ubuntu@3.236.228.63:/opt/deploy/
 
                 ssh -o StrictHostKeyChecking=no -i ~/.ssh/CT5171.pem \
