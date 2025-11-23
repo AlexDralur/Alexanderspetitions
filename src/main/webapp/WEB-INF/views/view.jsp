@@ -67,8 +67,8 @@
     %>
 
     <div class="text-center mt-4">
-        <a href="/create.html" class="btn btn-success">Create New Petition</a>
-        <a href="/" class="btn btn-secondary ms-3">Back to Home</a>
+        <a href="${pageContext.request.contextPath}/create.html" class="btn btn-success">Create New Petition</a>
+        <a href="/alexanderspetitions" class="btn btn-secondary ms-3">Back to Home</a>
     </div>
 </div>
 </body>
