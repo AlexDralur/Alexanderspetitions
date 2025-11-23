@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class PetitionListTest {
 
     @Test
-    void testAddPetition() {
+    public void testAddPetition() {
         Petition p = new Petition("Test Petition", "Test Description");
         PetitionList.addPetition(p);
 
@@ -17,7 +17,7 @@ public class PetitionListTest {
     }
 
     @Test
-    void testUnmodifiableList() {
+    public void testUnmodifiableList() {
         Petition p = new Petition("Another", "Desc");
         PetitionList.addPetition(p);
 

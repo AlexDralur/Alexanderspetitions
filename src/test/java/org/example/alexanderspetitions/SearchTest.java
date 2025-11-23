@@ -11,14 +11,14 @@ import static org.junit.jupiter.api.Assertions.*;
 public class SearchTest {
 
     @BeforeEach
-    void setup() {
+    public void setup() {
         PetitionList.clearAll();
         PetitionList.addPetition(new Petition("Save the Forest", "We must protect the environment"));
         PetitionList.addPetition(new Petition("Clean Beaches", "Stop pollution"));
     }
 
     @Test
-    void testSearchFindsTitle() {
+    public void testSearchFindsTitle() {
         String query = "forest";
 
         List<Petition> results = PetitionList.getPetitions().stream()
@@ -29,7 +29,7 @@ public class SearchTest {
     }
 
     @Test
-    void testSearchFindsDescription() {
+    public void testSearchFindsDescription() {
         String query = "pollution";
 
         List<Petition> results = PetitionList.getPetitions().stream()
@@ -40,7 +40,7 @@ public class SearchTest {
     }
 
     @Test
-    void testSearchReturnsEmpty() {
+    public void testSearchReturnsEmpty() {
         String query = "nothing";
 
         List<Petition> results = PetitionList.getPetitions().stream()

@@ -11,13 +11,13 @@ import static org.junit.jupiter.api.Assertions.*;
  public class SignatureTest {
 
     @BeforeEach
-    void setup() {
+    public void setup() {
         PetitionList.clearAll();
         PetitionList.addPetition(new Petition("Save the Forest", "We must protect the environment"));
     }
 
     @Test
-    void testAddSignature() {
+    public void testAddSignature() {
         String query = "forest";
 
         List<Petition> results = PetitionList.getPetitions().stream()
