@@ -1,0 +1,54 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('GetProject') {
+            steps {
+                git branch: 'main',
+                    url: 'https://github.com/AlexDralur/Alexanderspetitions'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'mvn clean install -DskipTests'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh 'mvn test'
+            }
+        }
+
+        stage('Package WAR') {
+            steps {
+                sh 'mvn -B package'
+                sh 'mv target/*.war target/alexspetitions.war'
+                archiveArtifacts artifacts: 'target/alexspetitions.war', fingerprint: true
+            }
+        }
+
+        stage('Approval') {
+            steps {
+                timeout(time: 10, unit: 'MINUTES') {
+                    input message: 'Deploy to EC2?'
+                }
+            }
+        }
+
+        stage('Deploy to EC2') {
+            steps {
+                sh """
+                scp -o StrictHostKeyChecking=no -i ~/.ssh/CT5171.pem \
+                    target/alexspetitions.war \
+                    ubuntu@3.236.228.63:/var/lib/tomcat10/webapps/
+
+                ssh -o StrictHostKeyChecking=no -i ~/.ssh/CT5171.pem \
+                    ubuntu@3.236.228.63 "sudo systemctl restart tomcat10"
+                """
+            }
+        }
+    }
+}
