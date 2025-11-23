@@ -38,6 +38,7 @@ pipeline {
             }
         }
 
+        //Comment to check location of JenkinsFile inside GitHub
         stage('Deploy to EC2') {
             steps {
                 sh """
