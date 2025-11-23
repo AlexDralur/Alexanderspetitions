@@ -48,10 +48,10 @@ pipeline {
                 sh """
                 scp -o StrictHostKeyChecking=no -i ~/.ssh/CT5171.pem \
                     target/alexspetitions.war \
-                    ubuntu@3.236.228.63:/var/lib/tomcat10/webapps/
+                    ubuntu@3.236.228.63:/opt/deploy/
 
                 ssh -o StrictHostKeyChecking=no -i ~/.ssh/CT5171.pem \
-                    ubuntu@3.236.228.63 "sudo systemctl restart tomcat10"
+                    ubuntu@3.236.228.63 "sudo /usr/local/bin/deploy_war.sh"
                 """
             }
         }
