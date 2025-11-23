@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.*;
 
- class SignatureTest {
+ public class SignatureTest {
 
     @BeforeEach
     void setup() {

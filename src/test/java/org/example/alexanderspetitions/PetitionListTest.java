@@ -6,7 +6,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class PetitionListTest {
+public class PetitionListTest {
 
     @Test
     void testAddPetition() {

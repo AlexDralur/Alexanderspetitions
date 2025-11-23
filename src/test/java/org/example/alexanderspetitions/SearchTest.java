@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class SearchLogicTest {
+public class SearchTest {
 
     @BeforeEach
     void setup() {
