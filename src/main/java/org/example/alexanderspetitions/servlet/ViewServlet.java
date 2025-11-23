@@ -26,7 +26,7 @@ public class ViewServlet extends HttpServlet {
         request.setAttribute("petitions", petitions);
 
         // Forward to JSP file to load all the petitions
-        getServletContext().getRequestDispatcher("alexspetitions/view.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher(request.getContextPath() + "/view.jsp").forward(request, response);
 
     }
 }

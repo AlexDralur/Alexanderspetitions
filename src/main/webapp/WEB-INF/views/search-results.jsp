@@ -53,7 +53,7 @@
         </li>
         <li>
             <!---- Form shown to each petition to allow user to sign all if they wish to do so ---->
-            <form action="${pageContext.request.contextPath}/sign-petition" method="post" class="mt-2">
+            <form action="<%= request.getContextPath() %>/sign-petition" method="post" class="mt-2">
                 <p>Do you want to sign this petition?</p>
                 <input type="hidden" name="title" value="<%= p.getTitle() %>">
                 <div class="row g-2 align-items-center">
@@ -80,7 +80,7 @@
     %>
 
     <div class="mt-4">
-        <a href="${pageContext.request.contextPath}/search.html" class="btn btn-success">New Search</a>
+        <a href="<%= request.getContextPath() %>/search.html" class="btn btn-success">New Search</a>
         <a href="/alexspetitions" class="btn btn-secondary ms-3">Back to Home</a>
     </div>
 </div>
