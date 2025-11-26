@@ -36,7 +36,7 @@
             <strong><%= p.getTitle() %></strong><br>
             <%= p.getDescription() %><br><br>
 
-            <form action="<%= request.getContextPath() %>/sign-petition" method="post" class="mt-2">
+            <form action="<%= request.getContextPath() %>/alexspetitions/sign-petition" method="post" class="mt-2">
                 <input type="hidden" name="title" value="<%= p.getTitle() %>">
                 <div class="row g-2 align-items-center">
                     <div class="col">

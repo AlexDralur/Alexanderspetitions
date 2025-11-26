@@ -53,7 +53,7 @@
         </li>
         <li>
             <!---- Form shown to each petition to allow user to sign all if they wish to do so ---->
-            <form action="<%= request.getContextPath() %>/sign-petition" method="post" class="mt-2">
+            <form action="<%= request.getContextPath() %>/alexspetitions/sign-petition" method="post" class="mt-2">
                 <p>Do you want to sign this petition?</p>
                 <input type="hidden" name="title" value="<%= p.getTitle() %>">
                 <div class="row g-2 align-items-center">

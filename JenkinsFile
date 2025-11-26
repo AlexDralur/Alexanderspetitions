@@ -48,10 +48,10 @@ pipeline {
                 sh """
                 scp -o StrictHostKeyChecking=no -i ~/.ssh/CT5171.pem \
                     target/alexspetitions.war \
-                    ubuntu@3.236.228.63:/opt/deploy/
+                    ubuntu@98.93.1.105:/opt/deploy/
 
                 ssh -o StrictHostKeyChecking=no -i ~/.ssh/CT5171.pem \
-                    ubuntu@3.236.228.63 "sudo /usr/local/bin/deploy_war.sh"
+                    ubuntu@98.93.1.105 "sudo /usr/local/bin/deploy_war.sh"
                 """
             }
         }
