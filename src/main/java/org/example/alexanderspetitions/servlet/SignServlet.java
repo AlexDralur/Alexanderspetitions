@@ -36,6 +36,6 @@ public class SignServlet extends HttpServlet {
         }
 
         //The view page is then returned to the user
-        response.sendRedirect(request.getContextPath() + "/view");
+        request.getRequestDispatcher("/WEB-INF/views/view.jsp").forward(request, response);
     }
 }

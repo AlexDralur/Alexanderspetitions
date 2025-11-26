@@ -33,6 +33,6 @@ public class SearchServlet extends HttpServlet {
         request.setAttribute("query", query);
 
         //Forward the attributes to the .jsp so it can load correctly
-        request.getRequestDispatcher(request.getContextPath() + "/search-results.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/views/search-results.jsp").forward(request, response);
     }
 }
