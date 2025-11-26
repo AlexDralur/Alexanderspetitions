@@ -36,7 +36,7 @@
             <strong><%= p.getTitle() %></strong><br>
             <%= p.getDescription() %><br><br>
 
-            <form action="<%= request.getContextPath() %>/alexspetitions/sign-petition" method="post" class="mt-2">
+            <form action="${pageContext.request.contextPath}/sign-petition" method="post" class="mt-2">
                 <input type="hidden" name="title" value="<%= p.getTitle() %>">
                 <div class="row g-2 align-items-center">
                     <div class="col">
@@ -67,8 +67,8 @@
     %>
 
     <div class="text-center mt-4">
-        <a href="<%= request.getContextPath() %>/create.jsp" class="btn btn-success">Create New Petition</a>
-        <a href="/alexspetitions" class="btn btn-secondary ms-3">Back to Home</a>
+        <a href="${pageContext.request.contextPath}/create.jsp" class="btn btn-success">Create New Petition</a>
+        <a href="${pageContext.request.contextPath}/index.jsp" class="btn btn-secondary ms-3">Back to Home</a>
     </div>
 </div>
 </body>
