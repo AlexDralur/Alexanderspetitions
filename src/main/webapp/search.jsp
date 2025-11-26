@@ -11,32 +11,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="alexspetitions/css/style.css">
+    <style>
+
+    </style>
 </head>
-<body class="bg-light">
-<div class="container my-5">
-    <!--- Head ---->
-    <h1 class="text-center mb-4">Create a New Petition</h1>
-
-    <!--- Form to create a new petition. Sends to CreateServlet ---->
-    <form action="/alexspetitions/create-petition" method="post" class="mx-auto" style="max-width: 600px;">
+<body>
+<div class="container text-center my-5">
+    <form action="${pageContext.request.contextPath}/search" method="get" class="mx-auto" style="max-width: 500px;">
         <div class="mb-3">
-            <!--- Sets the title of the petition ---->
-            <label for="title" class="form-label fw-bold">Petition Title</label>
-            <input type="text" id="title" name="title" class="form-control" required>
+            <label for="query" class="form-label fw-bold">Keyword:</label>
+            <input type="text" id="query" name="query" class="form-control" placeholder="e.g., environment" required>
         </div>
 
-        <div class="mb-3">
-            <!--- Sets the description of the petition ---->
-            <label for="description" class="form-label fw-bold">Description</label>
-            <textarea id="description" name="description" class="form-control" rows="4" required></textarea>
+        <div class="mt-4">
+            <button type="submit" class="btn btn-success">Search</button>
+            <a href="/alexspetitions" class="btn btn-secondary ms-3">Back to Home</a>
         </div>
-
-        <!--- Buttons to submit or to return to main page ---->
-        <button type="submit" class="btn btn-success">Submit Petition</button>
-        <a href="/alexspetitions" class="btn btn-secondary ms-3">Back to Home</a>
     </form>
 </div>
-<!------ Footer -->
 <footer class="footer mt-5 py-4 bg-light text-center">
     <p class="mb-0 text-muted">&copy; 2025 Alexander’s Petitions — All rights reserved.</p>
 </footer>

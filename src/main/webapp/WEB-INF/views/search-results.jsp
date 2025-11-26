@@ -80,7 +80,7 @@
     %>
 
     <div class="mt-4">
-        <a href="<%= request.getContextPath() %>/search.html" class="btn btn-success">New Search</a>
+        <a href="<%= request.getContextPath() %>/search.jsp" class="btn btn-success">New Search</a>
         <a href="/alexspetitions" class="btn btn-secondary ms-3">Back to Home</a>
     </div>
 </div>

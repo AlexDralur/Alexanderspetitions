@@ -25,7 +25,7 @@
     <div class="row">
         <!------ Buttons -->
         <div class="col text-center justify-content-around">
-            <a href="create.html" class="text-decoration-none index-button fw-bold">Create your petition</a>
+            <a href="${pageContext.request.contextPath}/create.jsp" class="text-decoration-none index-button fw-bold">Create your petition</a>
             <p class="button-desc">Create your own petition. You will need a title and description.</p>
         </div>
         <div class="col text-center justify-content-around">
@@ -33,7 +33,7 @@
             <p class="button-desc">Check all the petitions already created.</p>
         </div>
         <div class="col text-center justify-content-around">
-            <a href="search.html" class="text-decoration-none index-button fw-bold">Search Petitions</a>
+            <a href="${pageContext.request.contextPath}/search.jsp" class="text-decoration-none index-button fw-bold">Search Petitions</a>
             <p class="button-desc">Looking for a specific one? Just click above to search.</p>
         </div>
     </div>

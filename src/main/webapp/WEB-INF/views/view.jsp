@@ -67,7 +67,7 @@
     %>
 
     <div class="text-center mt-4">
-        <a href="<%= request.getContextPath() %>/create.html" class="btn btn-success">Create New Petition</a>
+        <a href="<%= request.getContextPath() %>/create.jsp" class="btn btn-success">Create New Petition</a>
         <a href="/alexspetitions" class="btn btn-secondary ms-3">Back to Home</a>
     </div>
 </div>
