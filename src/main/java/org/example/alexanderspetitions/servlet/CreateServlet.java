@@ -26,6 +26,6 @@ public class CreateServlet extends HttpServlet {
         PetitionList.addPetition(petition);
 
         // Return to view page showing all the petitions
-        request.getRequestDispatcher("/WEB-INF/views/view.jsp").forward(request, response);
+        response.sendRedirect(request.getContextPath() + "/view");
     }
 }
