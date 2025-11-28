@@ -17,7 +17,7 @@
 <!------ Head -->
 <header class="container text-center">
     <div class="row">
-        <h1 class="display-1">Welcome to Alexander’s Petitions</h1>
+        <h1 class="display-1">Welcome to Alexander&aposs Petitions</h1>
         <p class="lead">Create, view, and sign petitions with ease!</p>
     </div>
 </header>
