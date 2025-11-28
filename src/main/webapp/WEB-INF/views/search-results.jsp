@@ -86,7 +86,7 @@
 </div>
 
 <footer class="footer mt-5 py-4 bg-light text-center">
-    <p class="mb-0 text-muted">&copy; 2025 Alexander’s Petitions — All rights reserved.</p>
+    <p class="mb-0 text-muted">&copy; 2025 Alexander&apos;s Petitions — All rights reserved.</p>
 </footer>
 </body>
 </html>

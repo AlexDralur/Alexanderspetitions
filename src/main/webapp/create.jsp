@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Alexander’s Petitions</title>
+    <title>Alexander&apos;s Petitions</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -38,7 +38,7 @@
 </div>
 <!------ Footer -->
 <footer class="footer mt-5 py-4 bg-light text-center">
-    <p class="mb-0 text-muted">&copy; 2025 Alexander’s Petitions — All rights reserved.</p>
+    <p class="mb-0 text-muted">&copy; 2025 Alexander&apos;s Petitions — All rights reserved.</p>
 </footer>
 </body>
 </html>
